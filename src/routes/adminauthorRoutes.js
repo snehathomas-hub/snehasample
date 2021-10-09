@@ -11,7 +11,7 @@ function router(nav){
         })
     })
     adminauthorRouter.get('/add',function(req,res){
-        res.send("Book added succesfully");
+        res.send("Author added succesfully");
       
         // res.render('home',{
         //     nav,
