@@ -94,7 +94,7 @@
           <div class="row">    
             <br>
             <div class="col-md-2 col-sm-3 text-center">
-              <a class="story-title" href="#"><img alt="" src="/images/<%=book.img%>" style="width:100px;height:100px" class="img-circle"></a>
+              <a class="story-title" href="#"><img alt="" src="/images/<%=book.image%>" style="width:100px;height:100px" class="img-circle"></a>
             </div>
             <div class="col-md-10 col-sm-9">
               <h3><%=book.title%></h3>
@@ -109,6 +109,8 @@
             </div>
           </div>
           <hr>
+          <a href="/upbook/<%=book._id%>" class="btn btn-primary  btnNext">update <i class="glyphicon glyphicon-chevron-right"></i></a>
+           <a href="/delete/<%=book._id%>" class="btn btn-primary btnNext">delete<i class="glyphicon glyphicon-chevron-right"></i></a>
           
           
           <!--/stories-->

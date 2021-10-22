@@ -94,13 +94,13 @@
           <div class="row">    
             <br>
             <div class="col-md-2 col-sm-3 text-center">
-              <a class="story-title" href="#"><img alt="" src="/images/<%=author.img%>" style="width:100px;height:100px" class="img-circle"></a>
+              <a class="story-title" href="#"><img alt="" src="/images/<%=author.image%>" style="width:100px;height:100px" class="img-circle"></a>
             </div>
             <div class="col-md-10 col-sm-9">
               <h3><%=author.name%></h3>
               <div class="row">
                 <div class="col-xs-9">
-                  <h4><span class="label label-default">Famous Works:<%=author.other_works%></span></h4><h4>
+                  <!-- <h4><span class="label label-default">Famous Works:<%=author.other_works%></span></h4><h4> -->
                   <small style="font-family:courier,'new courier';" class="text-muted"><%=author.nationality%> </small>
                   </h4></div>
                 <div class="col-xs-3"></div>
@@ -109,6 +109,8 @@
             </div>
           </div>
           <hr>
+          <a href="/upauth/<%=author._id%>" class="btn btn-primary  btnNext">update <i class="glyphicon glyphicon-chevron-right"></i></a>
+          <a href="/delauth/<%=author._id%>" class="btn btn-primary btnNext">delete<i class="glyphicon glyphicon-chevron-right"></i></a>
           
           
           <!--/stories-->

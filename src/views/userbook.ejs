@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>BOOK</title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="/css/styles.css" rel="stylesheet">
+	</head>
+	<body>
+<header class="navbar navbar-bright navbar-fixed-top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/login" class="navbar-brand">Home</a>
+    </div>
+    <nav class="collapse navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+          <%for(i=0;i<usernav.length;i++){%>
+        <li>
+          <a href="<%=usernav[i].link%>"><%=usernav[i].name%></a>
+        </li>
+        <%}%>
+         
+      </ul>
+      <ul class="nav navbar-right navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-search"></i></a>
+          <ul class="dropdown-menu" style="padding:12px;">
+            <form class="form-inline">
+              <button type="submit" class="btn btn-default pull-right"><i class="glyphicon glyphicon-search"></i></button><input type="text" class="form-control pull-left" placeholder="Search">
+            </form>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div id="masthead">  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <h1><%=title%>
+          <p class="lead"></p>
+        </h1>
+      </div>
+      <div class="col-md-5">
+        <div class="well well-lg"> 
+          <div class="row">
+            <div class="col-sm-12">
+              
+              <img src="data:image/jpeg;base64,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"  height="150px" width="400px" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div><!-- /cont -->
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="top-spacer"> </div>
+      </div>
+    </div> 
+  </div><!-- /cont -->
+  
+</div>
+
+
+<div class="container">
+  <div class="row">
+    
+    <div class="col-md-12"> 
+      
+      <div class="panel">
+        <div class="panel-body">
+          
+          
+          
+          <!--/stories-->
+          <div class="row">    
+            <br>
+            <div class="col-md-2 col-sm-3 text-center">
+              <a class="story-title" href="#"><img alt="" src="/images/<%=book.image%>" style="width:100px;height:100px" class="img-circle"></a>
+            </div>
+            <div class="col-md-10 col-sm-9">
+              <h3><%=book.title%></h3>
+              <div class="row">
+                <div class="col-xs-9">
+                  <h4><span class="label label-default"><%=book.author%></span></h4><h4>
+                  <small style="font-family:courier,'new courier';" class="text-muted"><%=book.genre%>•
+                  </h4></div>
+                <div class="col-xs-3"></div>
+              </div>
+              <br><br>
+            </div>
+          </div>
+          <hr>
+          <!-- <a href="/upbook/<%=book._id%>" class="btn btn-primary  btnNext">update <i class="glyphicon glyphicon-chevron-right"></i></a>
+           <a href="/delete/<%=book._id%>" class="btn btn-primary btnNext">delete<i class="glyphicon glyphicon-chevron-right"></i></a> -->
+          
+          
+          <!--/stories-->
+          
+          
+          <!-- <a href="/" class="btn btn-primary pull-right btnNext">More <i class="glyphicon glyphicon-chevron-right"></i></a> -->
+        
+          
+        </div>
+      </div>
+                                                                                       
+	                                                
+                                                      
+   	</div><!--/col-12-->
+  </div>
+</div>
+                                                
+                                                                                
+<hr>
+
+<div class="container" id="footer">
+  <div class="row">
+    <div class="col col-sm-12">
+      
+      <h1>Follow Us</h1>
+      <div class="btn-group">
+       <a class="btn btn-twitter btn-lg" href="#"><i class="icon-twitter icon-large"></i> Twitter</a>
+	   <a class="btn btn-facebook btn-lg" href="#"><i class="icon-facebook icon-large"></i> Facebook</a>
+	   <a class="btn btn-google-plus btn-lg" href="#"><i class="icon-google-plus icon-large"></i> Google+</a>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <ul class="list-inline">
+          <li><i class="icon-facebook icon-2x"></i></li>
+          <li><i class="icon-twitter icon-2x"></i></li>
+          <li><i class="icon-google-plus icon-2x"></i></li>
+          <li><i class="icon-pinterest icon-2x"></i></li>
+        </ul>
+        
+      </div>
+      <div class="col-sm-6">
+          <p class="pull-right">Built with <i class="icon-heart-empty"></i> at <a href="http://www.bootply.com">Bootply</a></p>      
+      </div>
+    </div>
+  </div>
+</footer>
+	<!-- script references -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>

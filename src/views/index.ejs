@@ -126,13 +126,13 @@
           
           
           <div class="row"> 
-            <form action="/login" method="get">
-              Username: <input type="text" id="uname" placeholder="Username" onkeyup="validateuname()" required> <br>
+            <form action="/login" method="post">
+              Username: <input type="text" name="username" id="uname" placeholder="Username" onkeyup="validateuname()" required> <br>
               <span id="lblError" style="color: red"></span> <br>
-              Password: <input type="password" id="pwd" placeholder="Password" onkeyup="validatepwd()" required> <br>
+              Password: <input type="password" name="password" id="pwd" placeholder="Password" onkeyup="validatepwd()" required> <br>
               <span id="pwdError" style="color: red"></span> <br>
 
-              <button type="submit" onclick="check()">Login</button> <br>
+              <button type="submit">Login</button> <br>
               <a href="/signup" class="btn  pull-right" style="background-color: blueviolet; color: white; width: 300px;">New User?Sign in here</a>
               
 
@@ -201,7 +201,7 @@
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
     <!-- <script src="/public/js/indexjs.js"></script> -->
-    <script>
+    <!-- <script>
     function validateuname() {
         var uname = document.getElementById("uname").value;
         var lblError = document.getElementById("lblError");     
@@ -223,7 +223,7 @@
           pwdError.innerHTML="";
         }
     }
-    </script>
+    </script> -->
 
 
 	</body>
