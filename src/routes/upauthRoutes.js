@@ -43,7 +43,12 @@ function router(nav){
 
     //Route to update values.
     upauthRouter.post('/:id', upload.single("image"),(req,res,next)=>{
-       Authordata.findByIdAndUpdate({_id: req.params.id},req.body,(err,docs)=>{
+            var item={
+        name:req.body.name,
+           nationality: req.body.nationality,
+           image:req.file.filename,
+      }
+       Authordata.findByIdAndUpdate({_id: req.params.id},item,(err,docs)=>{
            if(err){
                console.log("error occured");
                next(err);
