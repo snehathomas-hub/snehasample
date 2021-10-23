@@ -43,7 +43,13 @@ function router(nav){
 
     //Route to update values.
     upbookRouter.post('/:id', upload.single("image"),(req,res,next)=>{
-       Bookdata.findByIdAndUpdate({_id: req.params.id},req.body,(err,docs)=>{
+      var item={
+        title:req.body.title,
+           author: req.body.author,
+           genre: req.body.genre,
+           image:req.file.filename,
+      }
+       Bookdata.findByIdAndUpdate({_id: req.params.id},item,(err,docs)=>{
            if(err){
                console.log("error occured");
                next(err);
